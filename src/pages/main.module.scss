@@ -1,0 +1,9 @@
+@import "src/app/styles/mixins";
+
+.container {
+  @include container(var(--container-width));
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+}

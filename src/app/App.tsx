@@ -1,9 +1,9 @@
-function App() {
+import { Router } from 'app/providers/router/router.tsx';
+
+const  App = () => {
   return (
-    <>
-      App
-    </>
+    <Router />
   );
-}
+};
 
 export default App;
