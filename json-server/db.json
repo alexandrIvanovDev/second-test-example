@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "GoPro HERO6 4K Action Camera some lasdfsfasf as sadf",
+      "price": "100",
+      "rating": "4.1",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "2",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "MacBook",
+      "price": "100",
+      "rating": "4.9",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "3",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "MacBook",
+      "price": "100",
+      "rating": "4.1",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "4",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "MacBook",
+      "price": "100",
+      "rating": "4.1",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "5",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "MacBook",
+      "price": "100",
+      "rating": "4.1",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "6",
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "title": "MacBook",
+      "price": "100",
+      "rating": "4.1",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+    },
+    {
+      "id": "7",
+      "category": "Phone",
+      "manufacturer": "Apple",
+      "title": "Iphone",
+      "price": "50",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30069508bb.jpg"
+    },
+    {
+      "id": "8",
+      "category": "Phone",
+      "manufacturer": "Samsung",
+      "title": "Galaxy",
+      "price": "60",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067949bb.jpg"
+    },
+    {
+      "id": "9",
+      "category": "Laptop",
+      "manufacturer": "MSI",
+      "title": "MSI Katana",
+      "price": "139 999",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    },
+    {
+      "id": "10",
+      "category": "Laptop",
+      "manufacturer": "MSI",
+      "title": "MSI Katana",
+      "price": "139 999",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    },
+    {
+      "id": "11",
+      "category": "Laptop",
+      "manufacturer": "MSI",
+      "title": "MSI Katana",
+      "price": "139 999",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    },
+    {
+      "id": "12",
+      "category": "Laptop",
+      "manufacturer": "MSI",
+      "title": "MSI Katana",
+      "price": "139 999",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    },
+    {
+      "id": "13",
+      "category": "Laptop",
+      "manufacturer": "MSI",
+      "title": "MSI Katana",
+      "price": "139 999",
+      "rating": "4.1",
+      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    }
+  ]
+}
