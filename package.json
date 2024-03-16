@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start:dev:server": "json-server -w ./json-server/db.json",
+    "server": "json-server -w ./server/db.json -p 3000",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -16,8 +16,9 @@
     "antd": "^5.15.2",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",
-    "json-server": "1.0.0-alpha.23",
     "mobx": "^6.12.0",
+    "mobx-react-lite": "^4.0.6",
+    "mobx-utils": "^6.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.0",
@@ -37,6 +38,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "json-server": "0.17.0",
     "stylelint": "^16.2.1",
     "stylelint-config-clean-order": "^5.4.1",
     "stylelint-config-standard-scss": "^13.0.0",

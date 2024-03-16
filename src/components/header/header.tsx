@@ -4,6 +4,8 @@ import { Input } from 'antd';
 import { HeartOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import logo from 'assets/logo.svg';
 import { Button } from 'components/button/button.tsx';
+import { Link } from 'react-router-dom';
+import { routePaths } from 'app/providers/router/routePaths.tsx';
 
 export const Header = () => {
   return (
@@ -22,10 +24,12 @@ export const Header = () => {
           <HeartOutlined />
           <span className={s.text}>Favourites</span>
         </Button>
-        <Button className={s.outlinedButton} variant={'outlined'}>
-          <ShoppingCartOutlined />
-          <span className={s.text}>My cart</span>
-        </Button>
+        <Link to={routePaths.cart}>
+          <Button className={s.outlinedButton} variant={'outlined'}>
+            <ShoppingCartOutlined />
+            <span className={s.text}>My cart</span>
+          </Button>
+        </Link>
       </div>
     </AntdHeader>
   );
