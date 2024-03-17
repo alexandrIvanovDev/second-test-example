@@ -1,15 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-
-export const passwordConstraint = z
-  .string()
-  .trim()
-  .min(4, { message: 'Password must be longer than 3 characters' });
+import { genericEmailConstraint, genericPasswordConstraint } from 'common/validationFields.ts';
 
 const signInSchema = z.object({
-  email: z.string().email(),
-  password: passwordConstraint,
+  email: genericEmailConstraint,
+  password: genericPasswordConstraint,
 });
 
 export type SignInFormType = z.infer<typeof signInSchema>;
