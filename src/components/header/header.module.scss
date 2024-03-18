@@ -17,21 +17,25 @@
     height: 100%;
     color: var(--primary-color);
 
-    .input {
-      width: 500px;
+    .logo {
+      @include flex;
     }
 
-    .outlinedButton {
-      @include flex(column, center, center);
+    .links {
+      @include flex(row, center, center, 1.5rem);
 
-      padding: 5px;
-      font-size: 18px;
-      color: var(--primary-color);
+      .outlinedButton {
+        @include flex(column, center, center);
+
+        padding: 5px;
+        font-size: 18px;
+        color: var(--primary-color);
 
 
-      .text {
-        margin: 0;
-        font-size: 10px;
+        .text {
+          margin: 0;
+          font-size: 10px;
+        }
       }
     }
   }

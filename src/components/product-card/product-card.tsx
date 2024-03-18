@@ -2,23 +2,28 @@ import s from './product-card.module.scss';
 import { Link } from 'react-router-dom';
 import { Rating } from 'components/rating/rating.tsx';
 import { Button } from 'components/button/button.tsx';
-import { HeartOutlined } from '@ant-design/icons';
-
-export type Product = {
-  id: string,
-  category: string,
-  manufacturer: string,
-  title: string,
-  price: string,
-  img: string,
-  rating: number,
-};
+import { HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { Product } from 'stores/products-store.ts';
+import { observer } from 'mobx-react-lite';
+import CartStore from 'stores/cart-store.ts';
+import { toast } from 'react-toastify';
 
 type Props = {
-  product: Product
+  product: Product;
 };
 
-export const ProductCard = ({ product }: Props) => {
+export const ProductCard = observer(({ product }: Props) => {
+  const { addToCart, totalPrice, items } = CartStore;
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    toast.success('Added to cart');
+  };
+
+  console.log(totalPrice);
+
+  console.log(items);
+
   return (
     <div className={s.product}>
       <Link className={s.imgWrapper} to={`/products/${product.id}`}>
@@ -37,8 +42,15 @@ export const ProductCard = ({ product }: Props) => {
             <HeartOutlined />
           </Button>
         </div>
-        <Link to={`/products/${product.id}`} className={s.title} title={product.title}>{product.title}</Link>
+        <div className={s.titleWrapper}>
+          <Link to={`/products/${product.id}`} className={s.title} title={product.title}>
+            {product.title}
+          </Link>
+          <Button onClick={handleAddToCart}>
+            <ShoppingCartOutlined />
+          </Button>
+        </div>
       </div>
     </div>
   );
-};
+});

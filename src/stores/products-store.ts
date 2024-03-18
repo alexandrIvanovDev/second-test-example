@@ -1,6 +1,12 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { fetchProducts } from 'api/fetch-products.ts';
 
+type Specifications = {
+  id: number;
+  description: string;
+  title: string;
+};
+
 export type Product = {
   id: string;
   category: string;
@@ -10,6 +16,7 @@ export type Product = {
   img: string;
   rating: number;
   description: string;
+  specifications: Specifications[];
 };
 
 class ProductsStore {

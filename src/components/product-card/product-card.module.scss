@@ -49,17 +49,21 @@
       @include flex(row, flex-start, center, 0.5rem);
     }
 
-    .title {
-      cursor: pointer;
+    .titleWrapper {
+      @include flex(row, space-between, center);
 
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
+      .title {
+        cursor: pointer;
 
-      color: var(--gray-800);
-      text-decoration: none;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
 
-      -webkit-line-clamp: 1;
+        color: var(--gray-800);
+        text-decoration: none;
+
+        -webkit-line-clamp: 1;
+      }
     }
   }
 }
