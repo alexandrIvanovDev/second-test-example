@@ -5,10 +5,37 @@
       "category": "Laptop",
       "manufacturer": "Apple",
       "title": "GoPro HERO6 4K Action Camera some lasdfsfasf as sadf",
-      "description": "Some description",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec arcu id leo imperdiet posuere a non arcu. Maecenas mauris urna, cursus eu sapien at, suscipit faucibus mauris. Donec in.",
       "price": "100",
-      "rating": "4.1",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "rating": "4.6",
+      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "16Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "512Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "10mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Apple M1"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "11000"
+        }
+      ]
     },
     {
       "id": "2",
@@ -117,6 +144,13 @@
       "price": "139 999",
       "rating": "4.1",
       "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "alexandr.1996@list.ru",
+      "password": "$2a$10$WUae6idZryoXIp8..dNOWOwc6rpbonYT9C/BK75R9uy7OeWIbi3.W",
+      "id": 1
     }
   ]
 }

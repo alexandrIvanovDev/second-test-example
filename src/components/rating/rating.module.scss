@@ -1,7 +1,11 @@
+@import "src/app/styles/mixins";
+
 .wrapper {
+  @include flex;
+
   .star {
     width: 16px;
     height: 16px;
-    fill: var(--warning-color-300);
+    fill: var(--warning-color);
   }
 }

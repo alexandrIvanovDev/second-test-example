@@ -4,28 +4,33 @@ import s from './sign-up.module.scss';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { SignUpForm } from 'components/sign-up-form/sign-up.tsx';
 import { SignUpFormType } from 'components/sign-up-form/use-sign-up.ts';
-import { createUser } from 'api/create-user.ts';
+import { signUp } from 'api/sign-up.ts';
 import { observer } from 'mobx-react-lite';
 import UserStore from 'stores/user-store.ts';
+import { toast } from 'react-toastify';
+import { AxiosError } from 'axios';
 
 export const SignUpPage = observer(() => {
   const { setUser, setIsAuth, user } = UserStore;
 
-  // const handleSignUp = async (data: SignUpFormType) => {
-  //   const { confirmPassword, ...rest } = data;
-  //   try {
-  //     console.log(`Rest: ${rest}`);
-  //     const res = await createUser(rest);
-  //     setUser(res.user);
-  //     setIsAuth(true);
-  //     console.log(res);
-  //   } catch (e) {
-  //     console.warn(e);
-  //   }
-  // };
+  const handleSignUp = async (data: SignUpFormType) => {
+    const { confirmPassword, ...rest } = data;
+    try {
+      const res = await signUp(rest);
+      if (res.status === 201) {
+        setUser(res.data.user);
+        setIsAuth(true);
+        toast.success('Authorized');
+      }
+    } catch (e) {
+      const err = e as AxiosError;
+      const message = err.response?.data;
+      toast.error(message as string);
+    }
+  };
 
   if (user?.id) {
-    return <Navigate to={routePaths.main} />;
+    return <Navigate to={routePaths.profile} />;
   }
 
   return (

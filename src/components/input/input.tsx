@@ -14,7 +14,13 @@ export const Input = (props: Props) => {
   return (
     <div className={s.wrapper}>
       {label && <div className={s.label}>{label}</div>}
-      <AntdInput {...rest} />
+      {rest.type === 'password'
+        ? (
+          <AntdInput.Password {...rest} className={className} status={error && 'error'} />
+        )
+        : (
+          <AntdInput {...rest} className={className} status={error && 'error'} />
+        )}
       {error && <div className={s.error}>{error}</div>}
     </div>
   );

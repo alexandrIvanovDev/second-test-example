@@ -13,6 +13,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.3",
     "@fontsource/roboto": "^5.0.12",
+    "@hookform/resolvers": "^3.3.4",
     "antd": "^5.15.2",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",
@@ -28,6 +29,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.3.1",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
@@ -38,7 +40,8 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "json-server": "0.17.0",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "stylelint": "^16.2.1",
     "stylelint-config-clean-order": "^5.4.1",
     "stylelint-config-standard-scss": "^13.0.0",

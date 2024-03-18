@@ -39,7 +39,7 @@ export const SignUpForm = ({ onSubmit }: Props) => {
           type="password"
           {...field}
           error={errors.confirmPassword?.message}
-          label={'Password'}
+          label={'Confirm password'}
         />}
       />
       <Button className={s.btn} htmlType={'submit'}>Sign Up</Button>
