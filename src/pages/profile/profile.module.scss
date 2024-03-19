@@ -1,0 +1,64 @@
+@import 'src/app/styles/mixins';
+
+.wrapper {
+  @include flex(column, flex-start, center, 0.5rem);
+  @include container(420px);
+
+  padding: 1.5rem 2rem;
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+
+  .title {
+    color: var(--primary);
+  }
+
+  .orderTitle {
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  .table {
+    border-collapse: collapse;
+    border: 1px solid var(--gray-300);
+
+    .header {
+      background: var(--gray-400);
+    }
+
+    .row {
+      border-bottom: 1px solid var(--gray-300);
+    }
+
+    .cell {
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
+
+
+  @media (width <= 460px) {
+    width: 90%;
+  }
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+}
+
+.btns {
+  @include flex(row, space-between, center);
+
+  align-self: normal;
+
+  .logoutBtn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+
+.oneBtn {
+  align-self: center;
+}

@@ -9,6 +9,7 @@ import { SignInPage } from 'pages/sign-in/sign-in.tsx';
 import { SignUpPage } from 'pages/sign-up/sign-up.tsx';
 import { NotFoundPage } from 'pages/not-found/not-found.tsx';
 import { ErrorBoundary } from 'app/providers/errorBoudary';
+import { OrderRegistration } from 'pages/order-registration/order-registration.tsx';
 
 const routes: RouteObject[] = [
   { path: routePaths.main, element: <MainPage /> },
@@ -17,6 +18,7 @@ const routes: RouteObject[] = [
   { path: routePaths.profile, element: <ProfilePage /> },
   { path: routePaths.signIn, element: <SignInPage /> },
   { path: routePaths.signUp, element: <SignUpPage /> },
+  { path: routePaths.order, element: <OrderRegistration /> },
   { path: routePaths.notFound, element: <NotFoundPage /> },
 ];
 

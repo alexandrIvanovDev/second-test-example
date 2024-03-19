@@ -1,0 +1,50 @@
+@import "src/app/styles/mixins";
+
+.container {
+  @include container(var(--container-width));
+
+  .orderWrapper {
+    @include flex(row, center, flex-start, 1rem);
+  }
+
+  .orderForm {
+    width: 70%;
+    padding: 1.5rem;
+
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+
+    .field {
+      @include flex(row, flex-start, center, 1rem);
+
+      .input {
+        width: 300px;
+      }
+    }
+  }
+
+  .priceWrapper {
+    @include flex(column, flex-start, normal, 1rem);
+
+    width: 30%;
+    padding: 1.5rem;
+
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+
+    .price {
+      @include flex(row, space-between);
+
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .products {
+      @include flex(row, space-between);
+
+      font-weight: bold;
+    }
+  }
+}

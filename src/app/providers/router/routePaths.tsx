@@ -1,4 +1,4 @@
-export type Routes = | 'signIn' | 'signUp' | 'main' | 'profile' | 'cart' | 'product' | 'notFound';
+export type Routes = | 'signIn' | 'signUp' | 'main' | 'profile' | 'cart' | 'product' | 'order' | 'notFound';
 
 export const routePaths: Record<Routes, string> = {
   signIn: '/sign-in',
@@ -7,5 +7,6 @@ export const routePaths: Record<Routes, string> = {
   profile: '/profile',
   product: '/products/:id',
   cart: '/cart',
+  order: '/order',
   notFound: '/*',
 };
