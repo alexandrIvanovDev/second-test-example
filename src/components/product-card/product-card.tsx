@@ -2,7 +2,7 @@ import s from './product-card.module.scss';
 import { Link } from 'react-router-dom';
 import { Rating } from 'components/rating/rating.tsx';
 import { Button } from 'components/button/button.tsx';
-import { HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Product } from 'stores/products-store.ts';
 import { observer } from 'mobx-react-lite';
 import CartStore from 'stores/cart-store.ts';
@@ -13,16 +13,12 @@ type Props = {
 };
 
 export const ProductCard = observer(({ product }: Props) => {
-  const { addToCart, totalPrice, items } = CartStore;
+  const { addItem } = CartStore;
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addItem(product);
     toast.success('Added to cart');
   };
-
-  console.log(totalPrice);
-
-  console.log(items);
 
   return (
     <div className={s.product}>
@@ -38,17 +34,14 @@ export const ProductCard = observer(({ product }: Props) => {
               <span>{product.rating}</span>
             </div>
           </div>
-          <Button className={s.favouriteBtn}>
-            <HeartOutlined />
+          <Button onClick={handleAddToCart}>
+            <ShoppingCartOutlined />
           </Button>
         </div>
         <div className={s.titleWrapper}>
           <Link to={`/products/${product.id}`} className={s.title} title={product.title}>
             {product.title}
           </Link>
-          <Button onClick={handleAddToCart}>
-            <ShoppingCartOutlined />
-          </Button>
         </div>
       </div>
     </div>

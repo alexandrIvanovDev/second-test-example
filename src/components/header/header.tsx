@@ -1,15 +1,15 @@
 import { Header as AntdHeader } from 'antd/es/layout/layout';
 import s from './header.module.scss';
-import { HeartOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
+import { ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import logo from 'assets/logo.svg';
 import { Button } from 'components/button/button.tsx';
 import { Link } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { observer } from 'mobx-react-lite';
-import UserStore from 'stores/user-store.ts';
+import CartStore from 'stores/cart-store.ts';
 
 export const Header = observer(() => {
-  const { isAuth } = UserStore;
+  const { items } = CartStore;
 
   return (
     <AntdHeader className={s.header}>
@@ -17,26 +17,19 @@ export const Header = observer(() => {
         <Link to={routePaths.main} className={s.logo}>
           <img src={logo} alt="logo" />
         </Link>
-        {/*<Button>About us</Button>*/}
-        {/*<Input className={s.input} placeholder="Search" />*/}
         <div className={s.links}>
           <Link to={routePaths.profile}>
-            <Button className={s.outlinedButton} variant={'outlined'}>
+            <Button className={s.outlinedButton} type={'link'}>
               <UserOutlined />
               <span className={s.text}>Profile</span>
             </Button>
           </Link>
-          {isAuth && (
-            <Button className={s.outlinedButton} variant={'outlined'}>
-              <HeartOutlined />
-              <span className={s.text}>Favourites</span>
-            </Button>
-          )}
-          <Link to={routePaths.cart}>
-            <Button className={s.outlinedButton} variant={'outlined'}>
+          <Link to={routePaths.cart} className={s.cart}>
+            <Button className={s.outlinedButton} type={'link'}>
               <ShoppingCartOutlined />
               <span className={s.text}>My cart</span>
             </Button>
+            {!!items.length && <div className={s.cartItems}>{items.length}</div>}
           </Link>
         </div>
       </div>

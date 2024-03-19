@@ -1,0 +1,97 @@
+@import "src/app/styles/mixins";
+
+.container {
+  @include container(var(--container-width));
+
+  .emptyCart {
+    @include flex(column, center, center);
+
+    color: var(--gray-500)
+  }
+
+  .cartWrapper {
+    @include flex(row, center, flex-start, 1rem);
+  }
+
+  .orderWrapper {
+    width: 70%;
+    padding: 1.5rem;
+
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+
+    .btns {
+      @include flex(row, space-between, center);
+
+      padding-top: 1.5rem;
+    }
+  }
+
+  .priceWrapper {
+    @include flex(column, flex-start, normal, 1rem);
+
+    width: 30%;
+    padding: 1.5rem;
+
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+
+    .price {
+      @include flex(row, space-between);
+
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .products {
+      @include flex(row, space-between);
+
+      font-weight: bold;
+    }
+  }
+}
+
+.item {
+  @include flex(row, flex-start, flex-start, 1rem);
+
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-300);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  .img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .itemInfo {
+    @include flex(column, space-between, flex-start, 1rem);
+
+    width: 100%;
+
+    .title {
+      @include flex(row, space-between);
+
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .controlWrapper {
+      .control {
+        @include flex(row, space-around, center, 0.5rem);
+
+        width: 250px;
+        padding: 5px 10px;
+        font-size: 18px;
+
+        .controlItem {
+          @include flex;
+        }
+      }
+    }
+  }
+}

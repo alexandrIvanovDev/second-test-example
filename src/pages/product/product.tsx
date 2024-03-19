@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 export const ProductPage = observer(() => {
   const { id } = useParams();
   const { getProduct } = ProductsStore;
-  const { addToCart } = CartStore;
+  const { addItem } = CartStore;
   const [product, setProduct] = useState<Product | null>(null);
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ export const ProductPage = observer(() => {
   }
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addItem(product);
     toast.success('Added to cart');
   };
 

@@ -1,0 +1,11 @@
+@import 'src/app/styles/mixins';
+
+.content {
+  @include flex(column, center, center, 2rem);
+
+  margin-top: 150px;
+
+  @media (width <= 460px) {
+    margin-top: 80px;
+  }
+}
