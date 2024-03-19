@@ -21,7 +21,7 @@ export const OrderForm = ({ onSubmit }: Props) => {
   const { clearCart } = CartStore;
 
   const countDown = () => {
-    let secondsToGo = 5;
+    let secondsToGo = 3;
 
     const instance = modal.success({
       title: 'Success',

@@ -14,6 +14,10 @@
     height: 100vh;
 
     background: rgb(150 150 150 / 50%);
+
+    .spinner {
+      font-size: 50px;
+    }
   }
 
   .products {
@@ -27,5 +31,9 @@
     margin-top: 3rem;
     color: var(--gray-600);
     text-align: center
+  }
+
+  .pagination {
+    margin-bottom: 2rem;
   }
 }

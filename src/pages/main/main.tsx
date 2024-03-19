@@ -9,21 +9,21 @@ import { Filter } from 'components/filter/filter.tsx';
 import { useDebounce } from 'common/use-debounce.ts';
 import FilterStore from 'stores/filter-store.ts';
 import PaginationStore from 'stores/pagination-store.ts';
-
-const options = [
-  { value: '', label: <span>All</span> },
-  { value: 'Laptops', label: <span>Laptops</span> },
-  { value: 'Phones', label: <span>Phones</span> },
-  { value: 'Tablets', label: <span>Tablets</span> },
-];
+import { categoriesOptions } from 'common/categories-options.tsx';
+import { manufacturerOptions } from 'common/manufacturer-options.tsx';
 
 export const MainPage = observer(() => {
   const { products, isLoading, getProducts } = ProductsStore;
-  const { selectedOption, setSelectedOption, searchTerm, setSearchTerm, clearFilter } = FilterStore;
   const { page, setPage, limit } = PaginationStore;
-
-  // const [page, setPage] = useState(1);
-  // const [limit] = useState(8);
+  const {
+    categoriesOption,
+    onChangeCategory,
+    searchTerm,
+    setSearchTerm,
+    clearFilter,
+    manufacturerOption,
+    onChangeManufacturer,
+  } = FilterStore;
 
   const onChangePage = (page: number) => {
     setPage(page);
@@ -32,23 +32,30 @@ export const MainPage = observer(() => {
   const debouncedTerm = useDebounce(searchTerm, 1000);
 
   useEffect(() => {
-    getProducts(page, limit, debouncedTerm, selectedOption);
-  }, [page, limit, debouncedTerm, selectedOption]);
+    getProducts(page, limit, debouncedTerm, categoriesOption, manufacturerOption);
+  }, [page, limit, debouncedTerm, categoriesOption, manufacturerOption]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [debouncedTerm, categoriesOption, manufacturerOption]);
 
   return (
     <div className={s.container}>
       {isLoading && (
         <div className={s.spinnerWrapper}>
-          <Spin indicator={<LoadingOutlined style={{ fontSize: 50 }} spin />} />
+          <Spin indicator={<LoadingOutlined className={s.spinner} spin />} />
         </div>
       )}
       <Filter
-        value={searchTerm}
-        setValue={setSearchTerm}
-        options={options}
-        selectedOption={selectedOption}
-        onChangeOption={setSelectedOption}
+        searchValue={searchTerm}
+        setSearchValue={setSearchTerm}
+        categoriesOptions={categoriesOptions}
+        selectedCategoriesOption={categoriesOption}
+        onChangeCategoriesOption={onChangeCategory}
         clearFilter={clearFilter}
+        manufacturerOptions={manufacturerOptions}
+        selectedManufacturerOption={manufacturerOption}
+        onChangeManufacturerOption={onChangeManufacturer}
       />
       {products.length ? (
         <div>
@@ -56,10 +63,10 @@ export const MainPage = observer(() => {
             {products.map((el) => <ProductCard product={el} key={el.id} />)}
           </div>
           <Pagination
+            current={page}
             onChange={onChangePage}
-            defaultCurrent={page}
             total={20}
-            style={{ marginBottom: 20 }}
+            className={s.pagination}
           />
         </div>
       ) : (

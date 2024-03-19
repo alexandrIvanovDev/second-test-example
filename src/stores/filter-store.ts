@@ -3,15 +3,15 @@ import { makePersistable } from 'mobx-persist-store';
 
 class FilterStore {
   searchTerm = '';
-
-  selectedOption = '';
+  categoriesOption = '';
+  manufacturerOption = '';
 
   constructor() {
     makeAutoObservable(this);
 
     makePersistable(this, {
       name: 'filter',
-      properties: ['searchTerm', 'selectedOption'],
+      properties: ['searchTerm', 'categoriesOption', 'manufacturerOption'],
       storage: window.localStorage,
     });
   }
@@ -20,15 +20,19 @@ class FilterStore {
     this.searchTerm = value;
   };
 
-  setSelectedOption = (value: string) => {
-    this.selectedOption = value;
+  onChangeCategory = (value: string) => {
+    this.categoriesOption = value;
+  };
+
+  onChangeManufacturer = (value: string) => {
+    this.manufacturerOption = value;
   };
 
   clearFilter = () => {
     this.searchTerm = '';
-    this.selectedOption = '';
+    this.categoriesOption = '';
+    this.manufacturerOption = '';
   };
-
 }
 
 export default new FilterStore();

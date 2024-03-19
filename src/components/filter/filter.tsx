@@ -2,33 +2,63 @@ import s from './filter.module.scss';
 import { Button, Input, Select } from 'antd';
 
 type Props = {
-  value: string;
-  setValue: (value: string) => void;
-  options: any;
-  selectedOption: string | undefined;
-  onChangeOption: (value: string) => void;
+  searchValue: string;
+  setSearchValue: (value: string) => void;
+  categoriesOptions: any;
+  selectedCategoriesOption: string | undefined;
+  onChangeCategoriesOption: (value: string) => void;
+  manufacturerOptions: any;
+  selectedManufacturerOption: string | undefined;
+  onChangeManufacturerOption: (value: string) => void;
   clearFilter: () => void;
 }
 
 export const Filter = (props: Props) => {
-  const { value, setValue, options, selectedOption, onChangeOption, clearFilter } = props;
+  const {
+    searchValue,
+    setSearchValue,
+    categoriesOptions,
+    selectedCategoriesOption,
+    onChangeCategoriesOption,
+    clearFilter,
+    manufacturerOptions,
+    selectedManufacturerOption,
+    onChangeManufacturerOption,
+  } = props;
 
   return (
     <div className={s.wrapper}>
       <Input
         className={s.search}
         placeholder={'Search product...'}
-        value={value}
-        onChange={(e) => setValue(e.currentTarget.value)}
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.currentTarget.value)}
         allowClear
       />
-      <Select
-        options={options}
-        value={selectedOption}
-        onSelect={onChangeOption}
-        className={s.select}
-      />
-      <Button onClick={clearFilter} type={value || selectedOption ? 'primary' : 'default'}>Clear filter</Button>
+      <div className={s.selectWrapper}>
+        <span className={s.selectLabel}>Category</span>
+        <Select
+          options={categoriesOptions}
+          value={selectedCategoriesOption}
+          onSelect={onChangeCategoriesOption}
+          className={s.select}
+        />
+      </div>
+      <div className={s.selectWrapper}>
+        <span className={s.selectLabel}>Manufacturer</span>
+        <Select
+          options={manufacturerOptions}
+          value={selectedManufacturerOption}
+          onSelect={onChangeManufacturerOption}
+          className={s.select}
+        />
+      </div>
+      <Button onClick={clearFilter}
+              type={searchValue || selectedCategoriesOption || selectedManufacturerOption
+                ? 'primary' : 'default'}
+      >
+        Clear filter
+      </Button>
     </div>
   );
 };

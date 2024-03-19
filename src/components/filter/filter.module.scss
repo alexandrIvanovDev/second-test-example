@@ -9,7 +9,22 @@
     width: 400px;
   }
 
-  .select {
-    width: 150px;
+  .selectWrapper {
+    @include flex(column, flex-start, flex-start);
+
+    position: relative;
+
+    .selectLabel {
+      position: absolute;
+      top: -20px;
+      left: 0;
+
+      font-size: 14px;
+      color: var(--gray-600)
+    }
+
+    .select {
+      width: 150px;
+    }
   }
 }

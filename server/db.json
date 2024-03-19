@@ -2,13 +2,13 @@
   "products": [
     {
       "id": "1",
-      "category": "Laptop",
+      "category": "Laptops",
       "manufacturer": "Apple",
-      "title": "GoPro HERO6 4K Action Camera some lasdfsfasf as sadf",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec arcu id leo imperdiet posuere a non arcu. Maecenas mauris urna, cursus eu sapien at, suscipit faucibus mauris. Donec in.",
-      "price": "100",
-      "rating": "4.6",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png",
+      "title": "Apple MacBook Pro 16 M1 Pro 1TB Laptop Silver",
+      "description": "Apple M1 Pro chip: a grand expansion of computing and graphics capabilities of the computer, acceleration of machine learning operations\nM1 Pro takes the M1 architecture to a new level of performance, opening up incredible opportunities for professional work. Up to 10 cores in the central processor and up to 16 in the graphics processor, a 16-core Neural Engine system, dedicated media processors for encoding and decoding files with support for H. 264, HEVC and ProRes codecs - this laptop can easily cope with the most ambitious projects.",
+      "price": "3890",
+      "rating": "4.8",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/311607/1_311607.jpg",
       "specifications": [
         {
           "id": 1,
@@ -28,7 +28,7 @@
         {
           "id": 4,
           "title": "CPU",
-          "description": "Apple M1"
+          "description": "Apple M1 Pro"
         },
         {
           "id": 5,
@@ -39,118 +39,520 @@
     },
     {
       "id": "2",
-      "category": "Laptop",
+      "category": "Laptops",
       "manufacturer": "Apple",
-      "title": "MacBook",
-      "price": "100",
-      "rating": "4.9",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "title": "Apple MacBook Air 13 M2 256GB",
+      "description": "Apple's new-generation M2-based MacBook Air is incredibly fast and energy-efficient, and its surprisingly thin body is made entirely of aluminum. This is a super-portable and super-powerful laptop that you can use to work, play or create anything-wherever you want.",
+      "price": "850",
+      "rating": "4.8",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/575965/1_575965.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "8Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "256Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "13mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Apple M2"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "5000"
+        }
+      ]
     },
     {
       "id": "3",
-      "category": "Laptop",
+      "category": "Laptops",
       "manufacturer": "Apple",
-      "title": "MacBook",
-      "price": "100",
-      "rating": "4.1",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "title": "Apple MacBook Pro 16 M3 Pro",
+      "description": "Apple's MacBook Pro takes the lead with the M3 Pro chip. Built with 3-nanometer technology and equipped with a completely new GPU architecture, it represents the most advanced chip ever created.",
+      "price": "990",
+      "rating": "4.8",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/696077/1_696077.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "32Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "512Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "8mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Apple M3"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "11000"
+        }
+      ]
     },
     {
       "id": "4",
-      "category": "Laptop",
+      "category": "Tablets",
       "manufacturer": "Apple",
-      "title": "MacBook",
-      "price": "100",
-      "rating": "4.1",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "title": "Apple iPad Tablet (2021) Wi-Fi 256 GB Gray space",
+      "description": "The Apple iPad (2021) is designed specifically for your favorite activities. Work, play, create, learn, communicate, and do many other things.",
+      "price": "450",
+      "rating": "3.4",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/304220/1_304220.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "4Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "5mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "A13 Bionic"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "1100"
+        }
+      ]
     },
     {
       "id": "5",
-      "category": "Laptop",
+      "category": "Phones",
       "manufacturer": "Apple",
-      "title": "MacBook",
-      "price": "100",
-      "rating": "4.1",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "title": "Apple iPhone 13 128 GB Green Smartphone",
+      "description": "The A15 Bionic processor and TrueDepth camera enable Face ID, an incredibly reliable authentication technology.\nThe Super Retina XDR display features an incredibly high pixel density - photos, videos, and text look strikingly clear",
+      "price": "300",
+      "rating": "3.9",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/571616/1_571616.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "2Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "13mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "A13 Bionic"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "3000"
+        }
+      ]
     },
     {
       "id": "6",
-      "category": "Laptop",
+      "category": "Phones",
       "manufacturer": "Apple",
-      "title": "MacBook",
-      "price": "100",
-      "rating": "4.1",
-      "img": "https://ru-apple.com.ru/image/cache/catalog/products_images/apple_store/Apple_MacBook_Pro_13_3_M2_1-1000x1000.png"
+      "title": "Apple iPhone 13 128 GB Smartphone dark night",
+      "description": "The A15 Bionic processor and TrueDepth camera enable Face ID, an incredibly reliable authentication technology.\nThe Super Retina XDR display features an incredibly high pixel density - photos, videos, and text look strikingly clear",
+      "price": "350",
+      "rating": "4.3",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/304240/1_304240.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "4Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "16mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "A15 Bionic"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "5500"
+        }
+      ]
     },
     {
       "id": "7",
-      "category": "Phone",
+      "category": "Tablets",
       "manufacturer": "Apple",
-      "title": "Iphone",
-      "price": "50",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30069508bb.jpg"
+      "title": "Apple iPad Pro Tablet (2022) 12.9 Wi-Fi 128 GB Space Gray",
+      "description": "The Apple iPad Pro (2022) tablet is equipped with a high-performance M2 chip, which has a positive effect not only on the system speed and the ability to use demanding applications, but also allows you to run games with console-quality graphics. The device works with ProRes and ProRes RAW formats, so you can even do video editing using the gadget.",
+      "price": "490",
+      "rating": "4.3",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/617781/1_617781.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "6Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "256Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "14mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "M2"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "7500"
+        }
+      ]
     },
     {
       "id": "8",
-      "category": "Phone",
+      "category": "Phones",
       "manufacturer": "Samsung",
-      "title": "Galaxy",
-      "price": "60",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067949bb.jpg"
+      "title": "Samsung Galaxy Z Flip 5 256 GB Beige Smartphone",
+      "description": "Perfect for your lifestyle and fits in any pocket. The Flex Screen is customized to your liking. Flex Camera lets you take selfies from incredible angles. And the battery will support you in any case.",
+      "price": "550",
+      "rating": "4.7",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/670571/1_670571.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "8Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "256Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "20mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Snapdragon 8 Gen 2"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "8500"
+        }
+      ]
     },
     {
       "id": "9",
-      "category": "Laptop",
-      "manufacturer": "MSI",
-      "title": "MSI Katana",
-      "price": "139 999",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+      "category": "Phones",
+      "manufacturer": "Samsung",
+      "title": "Samsung Galaxy A54 6+128 GB Graphite Smartphone",
+      "description": "The design of the Galaxy A54 5G embodies the desire for perfection: a premium glass back panel, a new harmonious arrangement of cameras and concise color solutions.",
+      "price": "650",
+      "rating": "3.3",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/647183/1_647183.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "6Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "10mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Exynos 1380"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "4500"
+        }
+      ]
     },
     {
       "id": "10",
-      "category": "Laptop",
-      "manufacturer": "MSI",
-      "title": "MSI Katana",
-      "price": "139 999",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+      "category": "Tablets",
+      "manufacturer": "Samsung",
+      "title": "Samsung Galaxy Tab S9 FE 10.9 Wi-Fi 128GB Graphite Tablet",
+      "description": "Experience a world of new features and hobbies with the Galaxy Tab S9 FE and Tab S9 FE+. Create, watch, and share — your favorite content is now displayed on a bright immersive screen. Emphasize your unique style by choosing one of the trending colors: mint, lavender, silver and graphite.",
+      "price": "490",
+      "rating": "4.3",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/690106/1_690106.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "6Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "14mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Exynos 1380"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "4500"
+        }
+      ]
     },
     {
       "id": "11",
-      "category": "Laptop",
-      "manufacturer": "MSI",
-      "title": "MSI Katana",
-      "price": "139 999",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+      "category": "Laptops",
+      "manufacturer": "Samsung",
+      "title": "Samsung Galaxy book 3 NP754 Laptop (NP754XFG-KB3IT)",
+      "price": "1330",
+      "rating": "4.3",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/697471/1_697471.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "16Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "512Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "5mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Intel Core i5-1335U"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "8500"
+        }
+      ]
     },
     {
       "id": "12",
-      "category": "Laptop",
-      "manufacturer": "MSI",
-      "title": "MSI Katana",
-      "price": "139 999",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+      "category": "Laptops",
+      "manufacturer": "Samsung",
+      "title": "Samsung Galaxy Book 2 NP754 Laptop (NP754XED-KC4IT)",
+      "price": "2930",
+      "rating": "4.7",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/692227/1_692227.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "16Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "256Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "3mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Intel Core i5-1235U"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "7800"
+        }
+      ]
     },
     {
       "id": "13",
-      "category": "Laptop",
-      "manufacturer": "MSI",
-      "title": "MSI Katana",
-      "price": "139 999",
-      "rating": "4.1",
-      "img": "https://img.mvideo.ru/Big/30067545bb.jpg"
+      "category": "Tablets",
+      "manufacturer": "Samsung",
+      "title": "Samsung Galaxy Tab S9 FE 10.9 Wi-Fi 128GB Lavender Tablet",
+      "description": "Experience a world of new features and hobbies with the Galaxy Tab S9 FE and Tab S9 FE+. Create, watch, and share — your favorite content is now displayed on a bright immersive screen. Emphasize your unique style by choosing one of the trending colors: mint, lavender, silver and graphite.",
+      "price": "1290",
+      "rating": "3.5",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/690208/1_690208.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "6Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "256Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "12mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "Exynos 1380"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "7800"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "category": "Tablets",
+      "manufacturer": "Apple",
+      "title": "Apple iPad mini Tablet",
+      "description": "The Apple iPad (2021) is designed specifically for your favorite activities. Work, play, create, learn, communicate, and do many other things.",
+      "price": "80",
+      "rating": "3.9",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/152034/1_152034.jpg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "8Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "14mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "A12 Bionic"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "11000"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "category": "Phones",
+      "manufacturer": "Apple",
+      "title": "Apple iPhone 14 128 GB Blue Smartphone",
+      "description": "Meet the iPhone 14 with crash detection and a battery that provides up to 20 hours of uninterrupted video viewing. And even more impressive shots in low light.",
+      "price": "180",
+      "rating": "3.6",
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/577216/1_577216.jpeg",
+      "specifications": [
+        {
+          "id": 1,
+          "title": "Amount of RAM available",
+          "description": "8Gb"
+        },
+        {
+          "id": 2,
+          "title": "SSD Capacity",
+          "description": "128Gb"
+        },
+        {
+          "id": 3,
+          "title": "Camera",
+          "description": "14mp"
+        },
+        {
+          "id": 4,
+          "title": "CPU",
+          "description": "A12 Bionic"
+        },
+        {
+          "id": 5,
+          "title": "Accumulator",
+          "description": "11000"
+        }
+      ]
     }
   ],
-  "users": [
-    {
-      "email": "alexandr.1996@list.ru",
-      "password": "$2a$10$WUae6idZryoXIp8..dNOWOwc6rpbonYT9C/BK75R9uy7OeWIbi3.W",
-      "id": 1
-    }
-  ]
+  "users": []
 }

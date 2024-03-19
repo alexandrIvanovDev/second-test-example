@@ -4,7 +4,9 @@
   @include flex(column, flex-start, center, 0.5rem);
   @include container(420px);
 
+  margin-bottom: 2rem;
   padding: 1.5rem 2rem;
+
   background: white;
   border: 1px solid var(--gray-300);
   border-radius: 4px;
