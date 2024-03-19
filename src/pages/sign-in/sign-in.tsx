@@ -1,4 +1,3 @@
-import s from './sign-in.module.scss';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { Link, Navigate } from 'react-router-dom';
 import { SignInFormType } from 'components/sign-in-form/use-sign-in.ts';
@@ -8,6 +7,7 @@ import { observer } from 'mobx-react-lite';
 import UserStore from 'stores/user-store.ts';
 import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
+import s from './sign-in.module.scss';
 
 export const SignInPage = observer(() => {
   const { setUser, setIsAuth, user } = UserStore;

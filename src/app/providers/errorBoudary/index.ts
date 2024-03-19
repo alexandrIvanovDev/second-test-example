@@ -1,1 +1,1 @@
-export * from './error-boudary.tsx'
+export * from './error-boudary.tsx';

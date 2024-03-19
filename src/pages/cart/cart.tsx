@@ -1,13 +1,15 @@
-import s from './cart.module.scss';
 import CartStore, { CartEntity } from 'stores/cart-store.ts';
 import { observer } from 'mobx-react-lite';
 import { useNavigate } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { ArrowLeftOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import s from './cart.module.scss';
 
 export const CartPage = observer(() => {
-  const { items, totalPrice, clearCart, totalCount } = CartStore;
+  const {
+    items, totalPrice, clearCart, totalCount,
+  } = CartStore;
   const navigate = useNavigate();
 
   return (
@@ -15,20 +17,20 @@ export const CartPage = observer(() => {
       {items.length === 0 ? (
         <div className={s.emptyCart}>
           <h2>The shopping cart is empty</h2>
-          <Button onClick={() => navigate(routePaths.main)} type={'primary'}>Continue shopping</Button>
+          <Button onClick={() => navigate(routePaths.main)} type="primary">Continue shopping</Button>
         </div>
       ) : (
         <>
           <h2>Cart ({items.length})</h2>
           <div className={s.cartWrapper}>
             <div className={s.orderWrapper}>
-              {items.map(el => (
+              {items.map((el) => (
                 <CartItem item={el} key={el.id} />
               ))}
               <div className={s.btns}>
                 <Button
                   icon={<ArrowLeftOutlined />}
-                  type={'primary'}
+                  type="primary"
                   onClick={() => navigate(routePaths.main)}
                 >
                   Back to shop
@@ -45,7 +47,7 @@ export const CartPage = observer(() => {
                 <span>Total products: </span>
                 <span>{totalCount}</span>
               </div>
-              <Button type={'primary'} onClick={() => navigate(routePaths.order)}>Order</Button>
+              <Button type="primary" onClick={() => navigate(routePaths.order)}>Order</Button>
             </div>
           </div>
         </>
@@ -69,10 +71,10 @@ export const CartItem = observer(({ item }: CartItemProps) => {
         </div>
         <div className={s.controlWrapper}>
           <div className={s.control}>
-            <Button size={'small'} danger onClick={() => removeItems(item.id)}>Remove</Button>
+            <Button size="small" danger onClick={() => removeItems(item.id)}>Remove</Button>
             <Button
               className={s.controlItem}
-              type={'text'}
+              type="text"
               icon={<MinusOutlined />}
               onClick={() => removeItem(item.id)}
               disabled={item.count === 1}
@@ -81,7 +83,7 @@ export const CartItem = observer(({ item }: CartItemProps) => {
             <Button
               className={s.controlItem}
               onClick={() => addItem(item)}
-              type={'text'}
+              type="text"
               icon={<PlusOutlined />}
             />
           </div>

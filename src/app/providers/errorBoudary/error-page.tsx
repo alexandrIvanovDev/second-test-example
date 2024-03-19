@@ -1,5 +1,5 @@
-import s from './error-page.module.scss';
 import { Button } from 'antd';
+import s from './error-page.module.scss';
 
 export const ErrorPage = () => {
   const reloadPage = () => {

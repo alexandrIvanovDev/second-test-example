@@ -1,4 +1,6 @@
-export const categoriesOptions = [
+import { Option } from 'common/manufacturer-options.tsx';
+
+export const categoriesOptions: Option[] = [
   { value: '', label: <span>All</span> },
   { value: 'Laptops', label: <span>Laptops</span> },
   { value: 'Phones', label: <span>Phones</span> },

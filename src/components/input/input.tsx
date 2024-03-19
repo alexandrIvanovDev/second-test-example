@@ -7,9 +7,10 @@ type Props = {
   label?: string
 } & InputProps;
 
-
 export const Input = (props: Props) => {
-  const { error, className, label, ...rest } = props;
+  const {
+    error, className, label, ...rest
+  } = props;
 
   return (
     <div className={s.wrapper}>

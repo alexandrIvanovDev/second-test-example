@@ -33,7 +33,7 @@ class UserStore {
   logout = () => {
     this._user = null;
     this._isAuth = false;
-  }
+  };
 
   get isAuth() {
     return this._isAuth;

@@ -1,4 +1,3 @@
-import s from './main.module.scss';
 import { useEffect } from 'react';
 import { ProductCard } from 'components/product-card/product-card.tsx';
 import { Pagination, Spin } from 'antd';
@@ -11,6 +10,7 @@ import FilterStore from 'stores/filter-store.ts';
 import PaginationStore from 'stores/pagination-store.ts';
 import { categoriesOptions } from 'common/categories-options.tsx';
 import { manufacturerOptions } from 'common/manufacturer-options.tsx';
+import s from './main.module.scss';
 
 export const MainPage = observer(() => {
   const { products, isLoading, getProducts } = ProductsStore;

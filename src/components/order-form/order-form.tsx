@@ -1,12 +1,12 @@
 import { Input } from 'components/input/input.tsx';
-import s from './order-form.module.scss';
 import { Controller } from 'react-hook-form';
-import { OrderFormType, useOrder } from './use-order.ts';
 import { Button, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import CartStore from 'stores/cart-store.ts';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import UserStore from 'stores/user-store.ts';
+import { OrderFormType, useOrder } from './use-order.ts';
+import s from './order-form.module.scss';
 
 type Props = {
   onSubmit: (data: OrderFormType) => void
@@ -48,33 +48,39 @@ export const OrderForm = ({ onSubmit }: Props) => {
   return (
     <form onSubmit={handleSubmit(submitForm)} className={s.form}>
       <Controller
-        name={'firstname'}
+        name="firstname"
         control={control}
-        render={({ field }) => <Input
-          {...field}
-          error={errors.firstname?.message}
-          label={'Firstname'}
-        />}
+        render={({ field }) => (
+          <Input
+            {...field}
+            error={errors.firstname?.message}
+            label="Firstname"
+          />
+        )}
       />
       <Controller
-        name={'lastname'}
+        name="lastname"
         control={control}
-        render={({ field }) => <Input
-          {...field}
-          error={errors.lastname?.message}
-          label={'Lastname'}
-        />}
+        render={({ field }) => (
+          <Input
+            {...field}
+            error={errors.lastname?.message}
+            label="Lastname"
+          />
+        )}
       />
       <Controller
-        name={'email'}
+        name="email"
         control={control}
-        render={({ field }) => <Input
-          {...field}
-          error={errors.email?.message}
-          label={'Email'}
-        />}
+        render={({ field }) => (
+          <Input
+            {...field}
+            error={errors.email?.message}
+            label="Email"
+          />
+        )}
       />
-      <Button type={'primary'} htmlType={'submit'}>Buy</Button>
+      <Button type="primary" htmlType="submit">Buy</Button>
       {contextHolder}
     </form>
   );

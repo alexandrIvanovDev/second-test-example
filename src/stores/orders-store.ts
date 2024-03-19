@@ -24,7 +24,7 @@ class OrdersStore {
   };
 
   get orderItems() {
-    return this.orders
+    return this.orders;
   }
 }
 

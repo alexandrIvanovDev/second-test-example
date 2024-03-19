@@ -1,6 +1,6 @@
-import { api } from './api.ts';
 import { SignInFormType } from 'components/sign-in-form/use-sign-in.ts';
 import { User } from 'stores/user-store.ts';
+import { api } from './api.ts';
 
 type Response = {
   accessToken: string;

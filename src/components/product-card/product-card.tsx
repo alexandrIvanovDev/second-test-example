@@ -1,4 +1,3 @@
-import s from './product-card.module.scss';
 import { Link } from 'react-router-dom';
 import { Rating } from 'components/rating/rating.tsx';
 import { ShoppingCartOutlined } from '@ant-design/icons';
@@ -7,6 +6,7 @@ import { observer } from 'mobx-react-lite';
 import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
 import { Button } from 'antd';
+import s from './product-card.module.scss';
 
 type Props = {
   product: Product;

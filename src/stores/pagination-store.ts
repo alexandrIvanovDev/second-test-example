@@ -3,6 +3,7 @@ import { makePersistable } from 'mobx-persist-store';
 
 class PaginationStore {
   page = 1;
+
   limit = 8;
 
   constructor() {

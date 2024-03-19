@@ -9,7 +9,7 @@ const signUpSchema = z
     password: genericPasswordConstraint,
     confirmPassword: genericPasswordConstraint,
   })
-  .refine(data => data.password === data.confirmPassword, {
+  .refine((data) => data.password === data.confirmPassword, {
     message: 'Passwords don\'t match',
     path: ['confirmPassword'],
   });

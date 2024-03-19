@@ -19,11 +19,10 @@ class CartStore {
       properties: ['items', 'totalCount', 'totalPrice'],
       storage: window.localStorage,
     });
-
   }
 
   addItem = (item: Product) => {
-    const foundItem = this.items.find(el => el.id === item.id);
+    const foundItem = this.items.find((el) => el.id === item.id);
 
     if (foundItem) {
       foundItem.count += 1;
@@ -36,12 +35,12 @@ class CartStore {
   };
 
   removeItem = (id: string) => {
-    const foundItem = this.items.find(el => el.id === id);
+    const foundItem = this.items.find((el) => el.id === id);
 
     if (foundItem) {
       foundItem.count -= 1;
       if (foundItem.count === 0) {
-        this.items = this.items.filter(el => el.id !== id);
+        this.items = this.items.filter((el) => el.id !== id);
       }
       this.totalPrice -= +foundItem.price;
       this.totalCount -= 1;
@@ -49,9 +48,9 @@ class CartStore {
   };
 
   removeItems = (id: string) => {
-    const foundItem = this.items.find(el => el.id === id);
+    const foundItem = this.items.find((el) => el.id === id);
     if (foundItem) {
-      this.items = this.items.filter(el => el.id !== id);
+      this.items = this.items.filter((el) => el.id !== id);
       this.totalPrice -= foundItem.count * +foundItem.price;
       this.totalCount -= foundItem.count;
     }

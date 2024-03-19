@@ -1,4 +1,3 @@
-import s from './product.module.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ProductsStore, { Product } from 'stores/products-store.ts';
@@ -8,6 +7,7 @@ import { ArrowLeftOutlined } from '@ant-design/icons';
 import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
 import { Button } from 'antd';
+import s from './product.module.scss';
 
 export const ProductPage = observer(() => {
   const { id } = useParams();
@@ -45,8 +45,13 @@ export const ProductPage = observer(() => {
           <>
             <h4 style={{ margin: 0 }}>Specifications</h4>
             <div className={s.specifications}>
-              {product.specifications?.map(el => (
-                <div key={el.id} className={el.id % 2 ? s.one : s.two}>{el.title}: {el.description}</div>
+              {product.specifications?.map((el) => (
+                <div
+                  key={el.id}
+                  className={el.id % 2 ? s.one : s.two}
+                >
+                  {el.title}: {el.description}
+                </div>
               ))}
             </div>
           </>
@@ -61,7 +66,7 @@ export const ProductPage = observer(() => {
           onClick={() => navigate(-1)}
           icon={<ArrowLeftOutlined />}
           className={s.backButton}
-          type={'primary'}
+          type="primary"
         >
           Back
         </Button>

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import s from './not-found.module.scss';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { Button } from 'antd';
+import s from './not-found.module.scss';
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export const NotFoundPage = () => {
       <h2>Sorry! Page not found!</h2>
       <Button
         onClick={() => navigate(routePaths.main)}
-        type={'primary'}
+        type="primary"
       >
         Back to home page
       </Button>

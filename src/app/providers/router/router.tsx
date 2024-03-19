@@ -1,6 +1,5 @@
 import { Layout } from 'components/layout/layout.tsx';
 import { createBrowserRouter, RouteObject, RouterProvider } from 'react-router-dom';
-import { routePaths } from './routePaths.tsx';
 import { MainPage } from 'pages/main/main.tsx';
 import { CartPage } from 'pages/cart/cart.tsx';
 import { ProductPage } from 'pages/product/product.tsx';
@@ -10,6 +9,7 @@ import { SignUpPage } from 'pages/sign-up/sign-up.tsx';
 import { NotFoundPage } from 'pages/not-found/not-found.tsx';
 import { ErrorBoundary } from 'app/providers/errorBoudary';
 import { OrderRegistration } from 'pages/order-registration/order-registration.tsx';
+import { routePaths } from './routePaths.tsx';
 
 const routes: RouteObject[] = [
   { path: routePaths.main, element: <MainPage /> },

@@ -3,7 +3,9 @@ import { makePersistable } from 'mobx-persist-store';
 
 class FilterStore {
   searchTerm = '';
+
   categoriesOption = '';
+
   manufacturerOption = '';
 
   constructor() {

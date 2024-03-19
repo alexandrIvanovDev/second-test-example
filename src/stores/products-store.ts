@@ -28,8 +28,13 @@ class ProductsStore {
     makeAutoObservable(this);
   }
 
-  getProducts = async (page?: number, limit?: number, category?: string,
-                       option?: string, manufacturer?: string) => {
+  getProducts = async (
+    page?: number,
+    limit?: number,
+    category?: string,
+    option?: string,
+    manufacturer?: string,
+  ) => {
     try {
       this.isLoading = true;
       const res = await fetchProducts(page, limit, category, option, manufacturer);
@@ -43,9 +48,7 @@ class ProductsStore {
     }
   };
 
-  getProduct = (id: string) => {
-    return this.products.find(el => el.id === id);
-  };
+  getProduct = (id: string) => this.products.find((el) => el.id === id);
 }
 
 export default new ProductsStore();

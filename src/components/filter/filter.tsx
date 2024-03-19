@@ -1,13 +1,14 @@
-import s from './filter.module.scss';
 import { Button, Input, Select } from 'antd';
+import { Option } from 'common/manufacturer-options.tsx';
+import s from './filter.module.scss';
 
 type Props = {
   searchValue: string;
   setSearchValue: (value: string) => void;
-  categoriesOptions: any;
+  categoriesOptions: Option[];
   selectedCategoriesOption: string | undefined;
   onChangeCategoriesOption: (value: string) => void;
-  manufacturerOptions: any;
+  manufacturerOptions: Option[];
   selectedManufacturerOption: string | undefined;
   onChangeManufacturerOption: (value: string) => void;
   clearFilter: () => void;
@@ -30,7 +31,7 @@ export const Filter = (props: Props) => {
     <div className={s.wrapper}>
       <Input
         className={s.search}
-        placeholder={'Search product...'}
+        placeholder="Search product..."
         value={searchValue}
         onChange={(e) => setSearchValue(e.currentTarget.value)}
         allowClear
@@ -53,9 +54,10 @@ export const Filter = (props: Props) => {
           className={s.select}
         />
       </div>
-      <Button onClick={clearFilter}
-              type={searchValue || selectedCategoriesOption || selectedManufacturerOption
-                ? 'primary' : 'default'}
+      <Button
+        onClick={clearFilter}
+        type={searchValue || selectedCategoriesOption || selectedManufacturerOption
+          ? 'primary' : 'default'}
       >
         Clear filter
       </Button>

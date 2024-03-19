@@ -1,6 +1,4 @@
 import { Link, Navigate } from 'react-router-dom';
-
-import s from './sign-up.module.scss';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { SignUpForm } from 'components/sign-up-form/sign-up.tsx';
 import { SignUpFormType } from 'components/sign-up-form/use-sign-up.ts';
@@ -9,6 +7,7 @@ import { observer } from 'mobx-react-lite';
 import UserStore from 'stores/user-store.ts';
 import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
+import s from './sign-up.module.scss';
 
 export const SignUpPage = observer(() => {
   const { setUser, setIsAuth, user } = UserStore;
