@@ -28,10 +28,10 @@ class ProductsStore {
     makeAutoObservable(this);
   }
 
-  getProducts = async (limit?: number, page?: number) => {
+  getProducts = async (page?: number, limit?: number) => {
     try {
       this.isLoading = true;
-      const res = await fetchProducts(limit, page);
+      const res = await fetchProducts(page, limit);
 
       runInAction(() => {
         this.products = res;

@@ -42,7 +42,7 @@ export const SignUpForm = ({ onSubmit }: Props) => {
           label={'Confirm password'}
         />}
       />
-      <Button className={s.btn} htmlType={'submit'}>Sign Up</Button>
+      <Button className={s.btn} htmlType={'submit'} type={'primary'}>Sign Up</Button>
     </form>
   );
 };

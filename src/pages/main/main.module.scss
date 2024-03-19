@@ -3,7 +3,22 @@
 .container {
   @include container(var(--container-width));
 
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
+  .spinnerWrapper {
+    @include flex;
+
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgb(150 150 150 / 50%);
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+  }
 }
