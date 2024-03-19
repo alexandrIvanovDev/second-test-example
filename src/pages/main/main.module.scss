@@ -19,6 +19,13 @@
   .products {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: flex-start
+  }
+
+  .noContentTitle {
+    margin-top: 3rem;
+    color: var(--gray-600);
+    text-align: center
   }
 }

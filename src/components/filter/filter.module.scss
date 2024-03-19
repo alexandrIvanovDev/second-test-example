@@ -1,0 +1,15 @@
+@import "src/app/styles/mixins";
+
+.wrapper {
+  @include flex(row, flex-start, center, 1rem);
+
+  margin: 1.5rem 0;
+
+  .search {
+    width: 400px;
+  }
+
+  .select {
+    width: 150px;
+  }
+}

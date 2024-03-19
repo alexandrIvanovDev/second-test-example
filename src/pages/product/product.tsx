@@ -41,12 +41,16 @@ export const ProductPage = observer(() => {
         </div>
         <span className={s.addedInfo}>Category: {product.category}</span>
         <span className={s.addedInfo}>Manufacturer: {product.manufacturer}</span>
-        <h4 style={{ margin: 0 }}>Specifications</h4>
-        <div className={s.specifications}>
-          {product.specifications?.map(el => (
-            <div key={el.id} className={el.id % 2 ? s.one : s.two}>{el.title}: {el.description}</div>
-          ))}
-        </div>
+        {product.specifications && (
+          <>
+            <h4 style={{ margin: 0 }}>Specifications</h4>
+            <div className={s.specifications}>
+              {product.specifications?.map(el => (
+                <div key={el.id} className={el.id % 2 ? s.one : s.two}>{el.title}: {el.description}</div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
       <div className={s.rightColumn}>
         <div className={s.cartWrapper}>
