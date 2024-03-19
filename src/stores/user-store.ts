@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx';
+import { makePersistable } from 'mobx-persist-store';
 
 export type User = {
   id: number;
@@ -13,6 +14,12 @@ class UserStore {
 
   constructor() {
     makeAutoObservable(this);
+
+    makePersistable(this, {
+      name: 'user',
+      properties: ['_user', '_isAuth'],
+      storage: window.localStorage,
+    });
   }
 
   setIsAuth = (value: boolean) => {
@@ -22,6 +29,11 @@ class UserStore {
   setUser = (user: User) => {
     this._user = user;
   };
+
+  logout = () => {
+    this._user = null;
+    this._isAuth = false;
+  }
 
   get isAuth() {
     return this._isAuth;

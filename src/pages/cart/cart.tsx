@@ -45,7 +45,7 @@ export const CartPage = observer(() => {
                 <span>Total products: </span>
                 <span>{totalCount}</span>
               </div>
-              <Button type={'primary'}>Buy</Button>
+              <Button type={'primary'} onClick={() => navigate(routePaths.order)}>Order</Button>
             </div>
           </div>
         </>
