@@ -1,12 +1,12 @@
 import s from './product-card.module.scss';
 import { Link } from 'react-router-dom';
 import { Rating } from 'components/rating/rating.tsx';
-import { Button } from 'components/button/button.tsx';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Product } from 'stores/products-store.ts';
 import { observer } from 'mobx-react-lite';
 import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
+import { Button } from 'antd';
 
 type Props = {
   product: Product;

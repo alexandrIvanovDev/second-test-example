@@ -33,7 +33,7 @@ export const CartPage = observer(() => {
                 >
                   Back to shop
                 </Button>
-                <Button onClick={clearCart}>Remove all</Button>
+                <Button onClick={clearCart} danger>Remove all</Button>
               </div>
             </div>
             <div className={s.priceWrapper}>
@@ -69,7 +69,7 @@ export const CartItem = observer(({ item }: CartItemProps) => {
         </div>
         <div className={s.controlWrapper}>
           <div className={s.control}>
-            <Button danger onClick={() => removeItems(item.id)}>Remove</Button>
+            <Button size={'small'} danger onClick={() => removeItems(item.id)}>Remove</Button>
             <Button
               className={s.controlItem}
               type={'text'}

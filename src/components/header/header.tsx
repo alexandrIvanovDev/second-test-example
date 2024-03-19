@@ -2,11 +2,11 @@ import { Header as AntdHeader } from 'antd/es/layout/layout';
 import s from './header.module.scss';
 import { ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import logo from 'assets/logo.svg';
-import { Button } from 'components/button/button.tsx';
 import { Link } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { observer } from 'mobx-react-lite';
 import CartStore from 'stores/cart-store.ts';
+import { Button } from 'antd';
 
 export const Header = observer(() => {
   const { items } = CartStore;

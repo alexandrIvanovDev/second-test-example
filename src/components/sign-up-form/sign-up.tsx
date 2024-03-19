@@ -2,7 +2,7 @@ import s from './sign-up.module.scss';
 import { SignUpFormType, useSignUp } from './use-sign-up.ts';
 import { Controller } from 'react-hook-form';
 import { Input } from 'components/input/input.tsx';
-import { Button } from 'components/button/button.tsx';
+import { Button } from 'antd';
 
 type Props = {
   onSubmit: (data: SignUpFormType) => void

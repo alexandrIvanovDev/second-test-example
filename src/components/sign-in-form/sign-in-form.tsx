@@ -1,8 +1,8 @@
-import { Button } from 'components/button/button.tsx';
 import { Input } from 'components/input/input.tsx';
 import s from './sign-in-form.module.scss';
 import { Controller } from 'react-hook-form';
 import { SignInFormType, useSignIn } from './use-sign-in.ts';
+import { Button } from 'antd';
 
 type Props = {
   onSubmit: (data: SignInFormType) => void

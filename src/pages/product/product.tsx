@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import ProductsStore, { Product } from 'stores/products-store.ts';
 import { observer } from 'mobx-react-lite';
 import { Rating } from 'components/rating/rating.tsx';
-import { Button } from 'components/button/button.tsx';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
+import { Button } from 'antd';
 
 export const ProductPage = observer(() => {
   const { id } = useParams();
@@ -57,6 +57,7 @@ export const ProductPage = observer(() => {
           onClick={() => navigate(-1)}
           icon={<ArrowLeftOutlined />}
           className={s.backButton}
+          type={'primary'}
         >
           Back
         </Button>
