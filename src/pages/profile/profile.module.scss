@@ -26,32 +26,30 @@
     .tableCell {
       padding: 5px;
       text-align: center;
+
+      .img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
+  .btns {
+    @include flex(row, space-between, center);
 
-  @media (width <= 460px) {
-    width: 90%;
+    align-self: normal;
+
+    .logoutBtn {
+      align-self: flex-end;
+      margin-top: 10px;
+    }
   }
 
-}
-
-.img {
-  width: 40px;
-  height: 40px;
-}
-
-.btns {
-  @include flex(row, space-between, center);
-
-  align-self: normal;
-
-  .logoutBtn {
-    align-self: flex-end;
-    margin-top: 10px;
+  .oneBtn {
+    align-self: center;
   }
-}
 
-.oneBtn {
-  align-self: center;
+  @media (width <= 500px) {
+    width: 80%;
+  }
 }

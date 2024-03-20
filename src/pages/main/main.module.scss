@@ -37,3 +37,32 @@
     margin-bottom: 2rem;
   }
 }
+
+@media (width <= 1230px) {
+  .container {
+    width: 90%;
+
+    .products {
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (width <= 970px) {
+  .container {
+    .products {
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (width <= 620px) {
+  .container {
+    .products {
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+    }
+  }
+}

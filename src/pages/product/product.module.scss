@@ -1,85 +1,132 @@
 @import "src/app/styles/mixins";
 
-.wrapper {
+.container {
   @include container(var(--container-width));
-  @include flex(row, flex-start, normal, 2rem);
-
-  padding: 20px;
-  background: var(--white);
-  border: 1px solid var(--gray-300);
-  border-radius: var(--radius);
-
-  .img {
-    width: 30%;
-    height: 380px;
-    border: 1px solid var(--gray-300);
-    border-radius: var(--radius);
-  }
-
-  .information {
-    @include flex(column, flex-start, flex-start, 0.5rem);
-
-    width: 50%;
-
-    .title {
-      margin: 0;
-    }
-
-    .description {
-      color: var(--gray-500);
-    }
-
-    .rating {
-      @include flex(row, center, center, 0.5rem);
-    }
-
-    .addedInfo {
-      color: var(--gray-500);
-    }
-
-    .specificationsTitle {
-      margin: 0;
-    }
-
-    .specifications {
-      width: 100%;
-
-      .oddRow {
-        padding: 5px 10px;
-        background: var(--gray-300);
-      }
-
-      .evenRow {
-        padding: 5px 10px;
-        background: transparent;
-      }
-    }
-  }
-
-  .rightColumn {
-    @include flex(column, space-between);
-
-    width: 20%;
-
-    .cartWrapper {
-      @include flex(column, center, center, 1rem);
-
-      width: 80%;
-      height: 100px;
-      padding: 20px;
-
-      background: var(--gray-100);
-      border: 1px solid var(--gray-300);
-      border-radius: var(--radius);
-
-      .price {
-        font-size: 18px;
-        font-weight: bold;
-      }
-    }
-  }
 
   .backButton {
-    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .wrapper {
+    @include flex(row, flex-start, normal, 2rem);
+
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+
+    .img {
+      width: 30%;
+      height: 380px;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+    }
+
+    .information {
+      @include flex(column, flex-start, flex-start, 0.5rem);
+
+      width: 50%;
+
+      .title {
+        margin: 0;
+      }
+
+      .description {
+        color: var(--gray-500);
+      }
+
+      .rating {
+        @include flex(row, center, center, 0.5rem);
+      }
+
+      .addedInfo {
+        color: var(--gray-500);
+      }
+
+      .specificationsTitle {
+        margin: 0;
+      }
+
+      .specifications {
+        width: 100%;
+
+        .oddRow {
+          padding: 5px 10px;
+          background: var(--gray-300);
+        }
+
+        .evenRow {
+          padding: 5px 10px;
+          background: transparent;
+        }
+      }
+    }
+
+    .rightColumn {
+      @include flex(column, space-between);
+
+      width: 20%;
+
+      .cartWrapper {
+        @include flex(column, center, center, 1rem);
+
+        width: 80%;
+        height: 100px;
+        padding: 20px;
+
+        background: var(--gray-100);
+        border: 1px solid var(--gray-300);
+        border-radius: var(--radius);
+
+        .price {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 1240px) {
+  .container {
+    width: 90%;
+
+    .wrapper {
+      .img {
+        width: 380px;
+      }
+    }
+  }
+}
+
+@media (width <= 1000px) {
+  .container {
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .information {
+        width: 100%;
+      }
+
+      .rightColumn {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media (width <= 500px) {
+  .container {
+    .wrapper {
+      .img {
+        width: 250px;
+        height: 250px;
+      }
+
+      .rightColumn {
+        width: 100%;
+      }
+    }
   }
 }

@@ -52,3 +52,26 @@
     }
   }
 }
+
+@media (width <= 1240px) {
+  .container {
+    width: 90%;
+
+    .cartWrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .orderWrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    .priceWrapper {
+      width: 100%;
+    }
+  }
+}

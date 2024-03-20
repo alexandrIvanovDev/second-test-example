@@ -20,7 +20,12 @@ export const OrderRegistration = () => {
       <h2>Order form</h2>
       <div className={s.orderWrapper}>
         <div className={s.orderForm}>
-          <OrderForm onSubmit={onSubmitForm} email={user?.email} clearCart={clearCart} />
+          <OrderForm
+            onSubmit={onSubmitForm}
+            email={user?.email}
+            clearCart={clearCart}
+            className={s.form}
+          />
         </div>
         <div className={s.priceWrapper}>
           <div className={s.price}>

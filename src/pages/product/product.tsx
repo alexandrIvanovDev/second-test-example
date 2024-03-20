@@ -35,45 +35,55 @@ export const ProductPage = observer(() => {
   };
 
   return (
-    <div className={s.wrapper}>
-      <img src={product.img} alt="img" className={s.img} />
-      <div className={s.information}>
-        <h3 className={s.title}>{product.title}</h3>
-        <span className={s.description}>{product.description}</span>
-        <div className={s.rating}>
-          <Rating rating={Math.round(product.rating)} /> {product.rating}
+    <div className={s.container}>
+      <Button
+        onClick={() => navigate(-1)}
+        icon={<ArrowLeftOutlined />}
+        className={s.backButton}
+        type="primary"
+      >
+        Back
+      </Button>
+      <div className={s.wrapper}>
+        <img src={product.img} alt="img" className={s.img} />
+        <div className={s.information}>
+          <h3 className={s.title}>{product.title}</h3>
+          <span className={s.description}>{product.description}</span>
+          <div className={s.rating}>
+            <Rating rating={Math.round(product.rating)} /> {product.rating}
+          </div>
+          <span className={s.addedInfo}>Category: {product.category}</span>
+          <span className={s.addedInfo}>Manufacturer: {product.manufacturer}</span>
+          {product.specifications && (
+            <>
+              <h4 className={s.specificationsTitle}>Specifications</h4>
+              <div className={s.specifications}>
+                {product.specifications?.map((el) => (
+                  <div
+                    key={el.id}
+                    className={el.id % 2 ? s.oddRow : s.evenRow}
+                  >
+                    {el.title}: {el.description}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
-        <span className={s.addedInfo}>Category: {product.category}</span>
-        <span className={s.addedInfo}>Manufacturer: {product.manufacturer}</span>
-        {product.specifications && (
-          <>
-            <h4 className={s.specificationsTitle}>Specifications</h4>
-            <div className={s.specifications}>
-              {product.specifications?.map((el) => (
-                <div
-                  key={el.id}
-                  className={el.id % 2 ? s.oddRow : s.evenRow}
-                >
-                  {el.title}: {el.description}
-                </div>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-      <div className={s.rightColumn}>
-        <div className={s.cartWrapper}>
-          <div className={s.price}>Price: ${product.price}</div>
-          <Button onClick={handleAddToCart}>Add to cart</Button>
+        <div className={s.rightColumn}>
+          <div className={s.cartWrapper}>
+            <div className={s.price}>Price: ${product.price}</div>
+            <Button onClick={handleAddToCart}>Add to cart</Button>
+          </div>
+          {/* <Button */}
+          {/*  onClick={() => navigate(-1)} */}
+          {/*  icon={<ArrowLeftOutlined />} */}
+          {/*  className={s.backButton} */}
+          {/*  type="primary" */}
+          {/* > */}
+          {/*  Back */}
+          {/* </Button> */}
         </div>
-        <Button
-          onClick={() => navigate(-1)}
-          icon={<ArrowLeftOutlined />}
-          className={s.backButton}
-          type="primary"
-        >
-          Back
-        </Button>
       </div>
     </div>
   );

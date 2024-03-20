@@ -3,6 +3,7 @@ import { Controller } from 'react-hook-form';
 import { Button, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
+import { clsx } from 'clsx';
 import { OrderFormType, useOrder } from './use-order.ts';
 import s from './order-form.module.scss';
 
@@ -10,9 +11,13 @@ type Props = {
   onSubmit: (data: OrderFormType) => void;
   email?: string;
   clearCart: () => void;
+  className?: string
 };
 
-export const OrderForm = ({ onSubmit, clearCart, email = '' }: Props) => {
+export const OrderForm = (props: Props) => {
+  const {
+    onSubmit, clearCart, email = '', className,
+  } = props;
   const { handleSubmit, errors, control } = useOrder(email);
   const [modal, contextHolder] = Modal.useModal();
 
@@ -44,7 +49,7 @@ export const OrderForm = ({ onSubmit, clearCart, email = '' }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submitForm)} className={s.form}>
+    <form onSubmit={handleSubmit(submitForm)} className={clsx(s.form, className)}>
       <Controller
         name="firstname"
         control={control}

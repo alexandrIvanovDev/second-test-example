@@ -48,3 +48,36 @@
     }
   }
 }
+
+@media (width <= 1240px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (width <= 800px) {
+  .container {
+    .orderWrapper {
+      flex-direction: column;
+    }
+
+    .form {
+      width: 100%;
+    }
+  }
+}
+
+@media (width <= 550px) {
+  .container {
+    .orderForm {
+      width: 90%;
+      padding: 1rem;
+    }
+
+    .priceWrapper {
+      width: 90%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  }
+}

@@ -13,8 +13,10 @@
 
   .container {
     @include flex(row, space-between);
+
     @include container(var(--container-width));
 
+    //width: var(--container-width);
     height: 100%;
     color: var(--primary-color);
 
@@ -59,6 +61,14 @@
           font-size: 10px;
         }
       }
+    }
+  }
+}
+
+@media (width <= 1240px) {
+  .header {
+    .container {
+      width: 90%;
     }
   }
 }

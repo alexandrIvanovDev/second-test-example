@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ProductCard } from 'components/ui/product-card/product-card.tsx';
 import { Pagination, Spin } from 'antd';
 import { observer } from 'mobx-react-lite';
@@ -12,7 +12,6 @@ import s from './main.module.scss';
 
 export const MainPage = observer(() => {
   const {
-    pagination: { currentPage, setCurrentPage, limit },
     products: { products, isLoading, getProducts },
     cart: { addItem },
     filter: {
@@ -26,11 +25,16 @@ export const MainPage = observer(() => {
     },
   } = useStores();
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [limit] = useState(8);
+
   const onChangePage = (page: number) => {
     setCurrentPage(page);
+
+    window.scroll({ top: 150, behavior: 'smooth' });
   };
 
-  const debouncedTerm = useDebounce(searchTerm, 1000);
+  const debouncedTerm = useDebounce(searchTerm);
 
   useEffect(() => {
     getProducts(currentPage, limit, debouncedTerm, categoriesOption, manufacturerOption);
