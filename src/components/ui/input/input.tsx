@@ -1,4 +1,5 @@
 import { Input as AntdInput, InputProps } from 'antd';
+import { forwardRef } from 'react';
 import s from './input.module.scss';
 
 type Props = {
@@ -7,13 +8,13 @@ type Props = {
   label?: string
 } & InputProps;
 
-export const Input = (props: Props) => {
+export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
     error, className, label, ...rest
   } = props;
 
   return (
-    <div className={s.wrapper}>
+    <div className={s.wrapper} ref={ref}>
       {label && <div className={s.label}>{label}</div>}
       {rest.type === 'password'
         ? (
@@ -25,4 +26,4 @@ export const Input = (props: Props) => {
       {error && <div className={s.error}>{error}</div>}
     </div>
   );
-};
+});
