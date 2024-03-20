@@ -1,11 +1,15 @@
-import CartStore from 'stores/cart-store.ts';
-import { OrderForm } from 'components/order-form/order-form.tsx';
-import OrdersStore from 'stores/orders-store.ts';
+import { OrderForm } from 'components/forms/order-form/order-form.tsx';
+import { useStores } from 'app/providers/root-store-context';
 import s from './order-registration.module.scss';
 
 export const OrderRegistration = () => {
-  const { totalPrice, totalCount, items } = CartStore;
-  const { addOrder } = OrdersStore;
+  const {
+    cart: {
+      totalPrice, totalCount, items, clearCart,
+    },
+    orders: { addOrder },
+    user: { user },
+  } = useStores();
 
   const onSubmitForm = () => {
     addOrder(items);
@@ -16,7 +20,7 @@ export const OrderRegistration = () => {
       <h2>Order form</h2>
       <div className={s.orderWrapper}>
         <div className={s.orderForm}>
-          <OrderForm onSubmit={onSubmitForm} />
+          <OrderForm onSubmit={onSubmitForm} email={user?.email} clearCart={clearCart} />
         </div>
         <div className={s.priceWrapper}>
           <div className={s.price}>

@@ -1,0 +1,13 @@
+.table {
+  border-collapse: collapse;
+  border: 1px solid var(--gray-300);
+
+  .header {
+    background: var(--gray-400);
+  }
+
+  .cell {
+    padding: 5px;
+    text-align: center;
+  }
+}

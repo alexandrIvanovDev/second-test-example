@@ -1,25 +1,29 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import ProductsStore, { Product } from 'stores/products-store.ts';
+import { Product } from 'stores/products-store.ts';
 import { observer } from 'mobx-react-lite';
-import { Rating } from 'components/rating/rating.tsx';
+import { Rating } from 'components/ui/rating/rating.tsx';
 import { ArrowLeftOutlined } from '@ant-design/icons';
-import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
 import { Button } from 'antd';
+import { useStores } from 'app/providers/root-store-context';
 import s from './product.module.scss';
 
 export const ProductPage = observer(() => {
   const { id } = useParams();
-  const { getProduct } = ProductsStore;
-  const { addItem } = CartStore;
+
+  const {
+    products: { getProduct },
+    cart: { addItem },
+  } = useStores();
+
   const [product, setProduct] = useState<Product | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const newProduct = getProduct(id as string);
     setProduct?.(newProduct as Product);
-  }, []);
+  }, [getProduct, id]);
 
   if (!product) {
     return null;
@@ -43,12 +47,12 @@ export const ProductPage = observer(() => {
         <span className={s.addedInfo}>Manufacturer: {product.manufacturer}</span>
         {product.specifications && (
           <>
-            <h4 style={{ margin: 0 }}>Specifications</h4>
+            <h4 className={s.specificationsTitle}>Specifications</h4>
             <div className={s.specifications}>
               {product.specifications?.map((el) => (
                 <div
                   key={el.id}
-                  className={el.id % 2 ? s.one : s.two}
+                  className={el.id % 2 ? s.oddRow : s.evenRow}
                 >
                   {el.title}: {el.description}
                 </div>

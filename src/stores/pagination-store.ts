@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx';
 import { makePersistable } from 'mobx-persist-store';
 
 class PaginationStore {
-  page = 1;
+  currentPage = 1;
 
   limit = 8;
 
@@ -11,13 +11,13 @@ class PaginationStore {
 
     makePersistable(this, {
       name: 'pagination',
-      properties: ['page', 'limit'],
+      properties: ['currentPage', 'limit'],
       storage: window.localStorage,
     });
   }
 
-  setPage = (page: number) => {
-    this.page = page;
+  setCurrentPage = (page: number) => {
+    this.currentPage = page;
   };
 }
 

@@ -4,12 +4,12 @@ import logo from 'assets/logo.svg';
 import { Link } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { observer } from 'mobx-react-lite';
-import CartStore from 'stores/cart-store.ts';
 import { Button } from 'antd';
+import { useStores } from 'app/providers/root-store-context';
 import s from './header.module.scss';
 
 export const Header = observer(() => {
-  const { items } = CartStore;
+  const { cart: { items } } = useStores();
 
   return (
     <AntdHeader className={s.header}>

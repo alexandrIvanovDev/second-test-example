@@ -1,24 +1,22 @@
-import { Input } from 'components/input/input.tsx';
+import { Input } from 'components/ui/input/input.tsx';
 import { Controller } from 'react-hook-form';
 import { Button, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import CartStore from 'stores/cart-store.ts';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
-import UserStore from 'stores/user-store.ts';
 import { OrderFormType, useOrder } from './use-order.ts';
 import s from './order-form.module.scss';
 
 type Props = {
-  onSubmit: (data: OrderFormType) => void
+  onSubmit: (data: OrderFormType) => void;
+  email?: string;
+  clearCart: () => void;
 };
 
-export const OrderForm = ({ onSubmit }: Props) => {
-  const { user } = UserStore;
-  const { handleSubmit, errors, control } = useOrder(user?.email);
+export const OrderForm = ({ onSubmit, clearCart, email = '' }: Props) => {
+  const { handleSubmit, errors, control } = useOrder(email);
   const [modal, contextHolder] = Modal.useModal();
 
   const navigate = useNavigate();
-  const { clearCart } = CartStore;
 
   const countDown = () => {
     let secondsToGo = 3;

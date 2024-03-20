@@ -1,22 +1,20 @@
 import { Link } from 'react-router-dom';
-import { Rating } from 'components/rating/rating.tsx';
+import { Rating } from 'components/ui/rating/rating.tsx';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Product } from 'stores/products-store.ts';
 import { observer } from 'mobx-react-lite';
-import CartStore from 'stores/cart-store.ts';
 import { toast } from 'react-toastify';
 import { Button } from 'antd';
 import s from './product-card.module.scss';
 
 type Props = {
   product: Product;
+  addToCart: (item: Product) => void;
 };
 
-export const ProductCard = observer(({ product }: Props) => {
-  const { addItem } = CartStore;
-
+export const ProductCard = observer(({ product, addToCart }: Props) => {
   const handleAddToCart = () => {
-    addItem(product);
+    addToCart(product);
     toast.success('Added to cart');
   };
 

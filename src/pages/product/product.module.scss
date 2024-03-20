@@ -37,15 +37,19 @@
       color: var(--gray-500);
     }
 
+    .specificationsTitle {
+      margin: 0;
+    }
+
     .specifications {
       width: 100%;
 
-      .one {
+      .oddRow {
         padding: 5px 10px;
         background: var(--gray-300);
       }
 
-      .two {
+      .evenRow {
         padding: 5px 10px;
         background: transparent;
       }

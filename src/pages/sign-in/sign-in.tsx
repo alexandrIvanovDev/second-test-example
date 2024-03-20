@@ -1,16 +1,16 @@
 import { routePaths } from 'app/providers/router/routePaths.tsx';
 import { Link, Navigate } from 'react-router-dom';
-import { SignInFormType } from 'components/sign-in-form/use-sign-in.ts';
-import { SignInForm } from 'components/sign-in-form/sign-in-form.tsx';
+import { SignInFormType } from 'components/forms/sign-in-form/use-sign-in.ts';
+import { SignInForm } from 'components/forms/sign-in-form/sign-in-form.tsx';
 import { signIn } from 'api/sign-in.ts';
 import { observer } from 'mobx-react-lite';
-import UserStore from 'stores/user-store.ts';
 import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
+import { useStores } from 'app/providers/root-store-context';
 import s from './sign-in.module.scss';
 
 export const SignInPage = observer(() => {
-  const { setUser, setIsAuth, user } = UserStore;
+  const { user: { setUser, setIsAuth, user } } = useStores();
 
   const handleLogin = async (data: SignInFormType) => {
     try {

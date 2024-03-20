@@ -20,29 +20,20 @@
     font-weight: bold;
   }
 
-  .table {
-    border-collapse: collapse;
-    border: 1px solid var(--gray-300);
+  .tableRow {
+    border-bottom: 1px solid var(--gray-300);
 
-    .header {
-      background: var(--gray-400);
-    }
-
-    .row {
-      border-bottom: 1px solid var(--gray-300);
-    }
-
-    .cell {
+    .tableCell {
       padding: 5px;
       text-align: center;
     }
   }
 
 
-
   @media (width <= 460px) {
     width: 90%;
   }
+
 }
 
 .img {

@@ -1,15 +1,19 @@
-import CartStore, { CartEntity } from 'stores/cart-store.ts';
 import { observer } from 'mobx-react-lite';
 import { useNavigate } from 'react-router-dom';
 import { routePaths } from 'app/providers/router/routePaths.tsx';
-import { ArrowLeftOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import { CartItem } from 'components/ui/cart-item/cart-item.tsx';
+import { useStores } from 'app/providers/root-store-context';
 import s from './cart.module.scss';
 
 export const CartPage = observer(() => {
   const {
-    items, totalPrice, clearCart, totalCount,
-  } = CartStore;
+    cart: {
+      items, clearCart, removeItems, addItem, removeItem, totalPrice, totalCount,
+    },
+  } = useStores();
+
   const navigate = useNavigate();
 
   return (
@@ -17,7 +21,12 @@ export const CartPage = observer(() => {
       {items.length === 0 ? (
         <div className={s.emptyCart}>
           <h2>The shopping cart is empty</h2>
-          <Button onClick={() => navigate(routePaths.main)} type="primary">Continue shopping</Button>
+          <Button
+            onClick={() => navigate(routePaths.main)}
+            type="primary"
+          >
+            Continue shopping
+          </Button>
         </div>
       ) : (
         <>
@@ -25,7 +34,13 @@ export const CartPage = observer(() => {
           <div className={s.cartWrapper}>
             <div className={s.orderWrapper}>
               {items.map((el) => (
-                <CartItem item={el} key={el.id} />
+                <CartItem
+                  item={el}
+                  key={el.id}
+                  addItem={addItem}
+                  removeItems={removeItems}
+                  removeItem={removeItem}
+                />
               ))}
               <div className={s.btns}>
                 <Button
@@ -52,43 +67,6 @@ export const CartPage = observer(() => {
           </div>
         </>
       )}
-    </div>
-  );
-});
-
-type CartItemProps = { item: CartEntity };
-
-export const CartItem = observer(({ item }: CartItemProps) => {
-  const { addItem, removeItem, removeItems } = CartStore;
-
-  return (
-    <div className={s.item}>
-      <img src={item.img} alt="img" className={s.img} />
-      <div className={s.itemInfo}>
-        <div className={s.title}>
-          <span>{item.title}</span>
-          <span>${item.price}</span>
-        </div>
-        <div className={s.controlWrapper}>
-          <div className={s.control}>
-            <Button size="small" danger onClick={() => removeItems(item.id)}>Remove</Button>
-            <Button
-              className={s.controlItem}
-              type="text"
-              icon={<MinusOutlined />}
-              onClick={() => removeItem(item.id)}
-              disabled={item.count === 1}
-            />
-            <span className={s.controlItem}>{item.count}</span>
-            <Button
-              className={s.controlItem}
-              onClick={() => addItem(item)}
-              type="text"
-              icon={<PlusOutlined />}
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 });

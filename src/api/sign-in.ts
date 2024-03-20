@@ -1,4 +1,4 @@
-import { SignInFormType } from 'components/sign-in-form/use-sign-in.ts';
+import { SignInFormType } from 'components/forms/sign-in-form/use-sign-in.ts';
 import { api } from 'api/api.ts';
 
 export const signIn = async (body: SignInFormType) => {
